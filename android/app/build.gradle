@@ -40,11 +40,11 @@ android {
     compileSdkVersion 35
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_21
-        targetCompatibility JavaVersion.VERSION_21
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '21'  // Set Kotlin JVM target to 17
+        jvmTarget = '17'  // Set Kotlin JVM target to 17
     }
 
     sourceSets {
