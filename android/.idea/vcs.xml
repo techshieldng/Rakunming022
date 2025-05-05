@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$USER_HOME$/AppData/Local/Pub/Cache/git/Paytm-All-in-one-flutter-sdk-0de0451b25bba80fa068a227053b0cb39906fea5" vcs="Git" />
+    <mapping directory="$USER_HOME$/AppData/Local/Pub/Cache/git/flutter-braintree-79b5898c574f2d11b3997f8ca4756c16534a8c9a" vcs="Git" />
+    <mapping directory="$USER_HOME$/AppData/Local/Pub/Cache/git/flutter_inappwebview-d89b1d32638b49dfc58c4b7c84153be0c269d057" vcs="Git" />
+    <mapping directory="$USER_HOME$/AppData/Local/Pub/Cache/git/flutter_paystack-2060e7adc0e70e5462ccef1d3c38a02a4c50ca37" vcs="Git" />
+    <mapping directory="$USER_HOME$/AppData/Local/Pub/Cache/git/store_checker-9b26172d3cc45ef56bebff28432e359e49cd5d1b" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../../src/flutter3.24.5/flutter" vcs="Git" />
+  </component>
+</project>
