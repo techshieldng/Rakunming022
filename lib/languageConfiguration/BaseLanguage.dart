@@ -46,7 +46,7 @@ class BaseLanguage {
 
   String get demoUser => getContentValueFromKey(20);
 
-  String get demoDeliveryMan => getContentValueFromKey;
+  String get demoDeliveryMan => getContentValueFromKey(00);
 
   String get doNotHaveAccount => getContentValueFromKey(22);
 
