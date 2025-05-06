@@ -404,53 +404,53 @@ class PaymentScreenState extends State<PaymentScreen> {
   }
 
   ///PayStack Payment
-  void payStackPayment(BuildContext context) async {
-    log("I AM HERE PAYSTACK");
-    final uniqueTransRef = PayWithPayStack().generateUuidV4();
-    PayWithPayStack().now(
-        context: context,
-        secretKey: payStackPublicKey!,
-        customerEmail: getStringAsync(USER_EMAIL),
-        reference: uniqueTransRef,
-        currency: appStore.currencyCode,
-        amount: widget.totalAmount.toString(),
-        paymentChannel: ["card", "mobile_money"],
-        callbackUrl: "https://google.com",
-        transactionCompleted: (paymentData) {
-          log("paymentData ====> ${paymentData.toJson()}");
-          Map<String, dynamic> req = {
-            "status": paymentData.status.toString(),
-            "card": {
-              "number": paymentData.authorization?.accountName ?? "",
-              "cvc": paymentData.authorization?.last4 ?? "",
-              "expiry_month": paymentData.authorization?.cardType ?? "",
-              "expiry_year": paymentData.authorization?.bin ?? "",
-            },
-            "message": paymentData.message.toString(),
-            "method": paymentData.channel.toString(),
-            "reference": paymentData.reference.toString(),
-          };
-          if (paymentData.status == true) {
-            if (widget.isWallet == true) {
-              paymentConfirm(
-                  paymentType: PAYMENT_TYPE_PAYSTACK,
-                  transactionId: paymentData.reference);
-            } else {
-              savePaymentApiCall(
-                  paymentType: PAYMENT_TYPE_PAYSTACK,
-                  paymentStatus: PAYMENT_PAID,
-                  transactionDetail: req,
-                  txnId: paymentData.reference);
-            }
-          } else {
-            toast(language.transactionFailed);
-          }
-          debugPrint(paymentData.toString());
-        },
-        transactionNotCompleted: (reason) {
-          debugPrint("==> Transaction failed reason $reason");
-          toast(language.transactionFailed);
-        });
+  //void payStackPayment(BuildContext context) async {
+   // log("I AM HERE PAYSTACK");
+   // final uniqueTransRef = PayWithPayStack().generateUuidV4();
+   // PayWithPayStack().now(
+        //context: context,
+        //secretKey: payStackPublicKey!,
+        //customerEmail: getStringAsync(USER_EMAIL),
+        //reference: uniqueTransRef,
+        //currency: appStore.currencyCode,
+        //amount: widget.totalAmount.toString(),
+        //paymentChannel: ["card", "mobile_money"],
+        //callbackUrl: "https://google.com",
+        //transactionCompleted: (paymentData) {
+          //log("paymentData ====> ${paymentData.toJson()}");
+          //Map<String, dynamic> req = {
+            //"status": paymentData.status.toString(),
+            //"card": {
+              //"number": paymentData.authorization?.accountName ?? "",
+              //"cvc": paymentData.authorization?.last4 ?? "",
+              //"expiry_month": paymentData.authorization?.cardType ?? "",
+              //"expiry_year": paymentData.authorization?.bin ?? "",
+            //},
+            //"message": paymentData.message.toString(),
+           // "method": paymentData.channel.toString(),
+           // "reference": paymentData.reference.toString(),
+         // };
+         // if (paymentData.status == true) {
+            //if (widget.isWallet == true) {
+             // paymentConfirm(
+                 // paymentType: PAYMENT_TYPE_PAYSTACK,
+                  //transactionId: paymentData.reference);
+            //} else {
+             // savePaymentApiCall(
+                  //paymentType: PAYMENT_TYPE_PAYSTACK,
+                  //paymentStatus: PAYMENT_PAID,
+                  //transactionDetail: req,
+                  //txnId: paymentData.reference);
+            //}
+          //} else {
+           // toast(language.transactionFailed);
+          //}
+          //debugPrint(paymentData.toString());
+        //},
+        //transactionNotCompleted: (reason) {
+         // debugPrint("==> Transaction failed reason $reason");
+         // toast(language.transactionFailed);
+        //});
     // Charge charge = Charge()
     //   ..amount = (widget.totalAmount * 100).toInt() // In base currency
     //   ..email = getStringAsync(USER_EMAIL)
