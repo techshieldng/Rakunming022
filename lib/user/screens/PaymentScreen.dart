@@ -229,7 +229,7 @@ class PaymentScreenState extends State<PaymentScreen> {
   void razorPayPayment() async {
     var options = {
       'key': razorKey.validate(),
-      //'amount': (widget.totalAmount * 100).toInt(),
+      'amount: widget.totalAmount.toString(),
       'theme.color': '#5957b0',
       'name': mAppName,
       'description': 'On Demand Local Delivery System',
