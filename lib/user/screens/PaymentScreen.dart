@@ -229,7 +229,7 @@ class PaymentScreenState extends State<PaymentScreen> {
   void razorPayPayment() async {
     var options = {
       'key': razorKey.validate(),
-      'amount: widget.totalAmount.toString(),
+      'amount': (widget.totalAmount * 100).toInt(),
       'theme.color': '#5957b0',
       'name': mAppName,
       'description': 'On Demand Local Delivery System',
@@ -413,7 +413,7 @@ class PaymentScreenState extends State<PaymentScreen> {
         customerEmail: getStringAsync(USER_EMAIL),
         reference: uniqueTransRef,
         currency: appStore.currencyCode,
-        amount: (widget.totalAmount * 100).toInt(),
+        'amount': (widget.totalAmount * 100).toInt(),
         paymentChannel: ["card", "mobile_money"],
         callbackUrl: "https://google.com",
         transactionCompleted: (paymentData) {
