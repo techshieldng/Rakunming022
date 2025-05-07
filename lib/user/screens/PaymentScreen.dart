@@ -413,7 +413,7 @@ class PaymentScreenState extends State<PaymentScreen> {
         customerEmail: getStringAsync(USER_EMAIL),
         reference: uniqueTransRef,
         currency: appStore.currencyCode,
-        amount: (widget.totalAmount * 100).toInt(),
+        amount: (widget.totalAmount * 100).toDouble(),
         paymentChannel: ["card", "mobile_money"],
         callbackUrl: "https://google.com",
         transactionCompleted: (paymentData) {
