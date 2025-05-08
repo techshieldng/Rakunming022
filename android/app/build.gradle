@@ -37,7 +37,7 @@ android {
             storePassword = keystoreProperties['storePassword']
         }
     }
-    compileSdkVersion 35
+    compileSdkVersion 34
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
