@@ -5,7 +5,7 @@ import '../../extensions/extension_util/int_extensions.dart';
 import '../../extensions/colors.dart';
 import '../../extensions/common.dart';
 
-const mAppName = 'Mighty Delivery';
+const mAppName = 'Rakunming';
 //endregion
 
 //region Baseurl
@@ -13,7 +13,7 @@ const mAppName = 'Mighty Delivery';
 //live
 //const DOMAIN_URL = 'https://meetmighty.com/mobile/delivery-admin'; // Don't add slash at the end of the url
 //test
-const DOMAIN_URL = 'https://meetmighty.com/mobile/delivery-admin'; // Don't add slash at the end of the url
+const DOMAIN_URL = 'https://rakunming.com'; // Don't add slash at the end of the url
 // Don't add slash at the end of the url
 //endregion
 
